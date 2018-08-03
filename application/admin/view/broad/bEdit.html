@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="author" content="">
+    <meta name="copyright" content="">
+    <title>添加导航--云琰</title>
+    <link href="/favicon.ico" rel="icon">
+    <link href="__ADMIN__/css/bootstrap.css" rel="stylesheet">
+    <link href="__ADMIN__/css/iconfont.css" rel="stylesheet">
+    <link href="__ADMIN__/css/font-awesome.css" rel="stylesheet">
+    <link href="__ADMIN__/css/bootstrap-select.css" rel="stylesheet">
+    <link href="__ADMIN__/css/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="__ADMIN__/css/base_2.css" rel="stylesheet">
+    <link href="__ADMIN__/css/base_3.css" rel="stylesheet">
+    <script src="__ADMIN__/js/jquery_1.js"></script>
+    <script src="__ADMIN__/js/bootstrap_1.js"></script>
+    <script src="__ADMIN__/js/bootstrap-growl_1.js"></script>
+    <script src="__ADMIN__/js/bootbox.js"></script>
+    <script src="__ADMIN__/js/jquery.nicescroll.js"></script>
+    <script src="__ADMIN__/js/jquery.cookie_1.js"></script>
+    <script src="__ADMIN__/js/underscore_1.js"></script>
+    <script src="__ADMIN__/js/url_1.js"></script>
+    <script src="__ADMIN__/js/velocity.js"></script>
+    <script src="__ADMIN__/js/velocity.ui.js"></script>
+    <script src="__ADMIN__/js/base_1.js"></script>
+    <script src="__ADMIN__/js/base_1.js"></script>
+</head>
+<body class="admin">
+{include file="common/head"}
+{include file="common/left"}
+<main>
+    <div class="container-fluid">
+        <ol class="breadcrumb">
+            <li>
+                <a href="{:url('admin/index/index')}">
+                    <i class="iconfont icon-homefill"></i>
+                    首页
+                </a>
+            </li>
+            <li class="active">添加图片</li>
+        </ol>
+        <form class="form-horizontal" action="" id="tf" method="post" enctype="multipart/form-data">
+            <input type="hidden" value="{$info.id}" name="id"/>
+            <div class="panel panel-default">
+                <div class="panel-heading">添加图片</div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="col-xs-3 col-sm-2 control-label item-required" for="name">名称:</label>
+                        <div class="col-xs-9 col-sm-4">
+                            <input id="name" name="name" value="{$info.name}" class="form-control" maxlength="200" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-3 col-sm-2 control-label item-required" for="name">是否隐藏:</label>
+                        <div class="col-xs-9 col-sm-4">
+                            <select name="show_nav" class=" form-control" data-live-search="true" data-size="10" tabindex="-98">
+                                <option value="1" {if condition="$info.show_nav eq 1"}selected="selected"{/if}>显示</option>
+                                <option value="0" {if condition="$info.show_nav eq 0"}selected="selected"{/if}>隐藏</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-3 col-sm-2 control-label">图片:</label>
+                        <div class="col-xs-9 col-sm-4">
+                            <!--<a href="#" onclick="addphoto(this)">[+]</a>-->
+                            <input class="" name="thumb"  type="file">
+                            {if condition="$info.thumb eq ''"}
+                            {else/}
+                            <img style="width: 230px;height: 130px;margin-top: 10px" src="__UPLOADS__/{$info.thumb}">
+                            {/if}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-3 col-sm-2 control-label" for="order">排序:</label>
+                        <div class="col-xs-9 col-sm-4">
+                            <input id="order" name="orders" value="{$info.orders}" class="form-control" maxlength="9" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-xs-9 col-sm-10 col-xs-offset-3 col-sm-offset-2">
+                            <!--<button class="btn btn-primary" id="tijiao" type="submit">确 定</button>-->
+                            <span class="btn btn-primary" id="tijiao"  onclick="test();" >确 定</span>
+                            <a href="{$urlList}"><button class="btn btn-default" type="button" data-action="back">返 回</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
+
+<div id="ascrail2000" class="nicescroll-rails nicescroll-rails-vr" style="width: 4px; z-index: 100; position: fixed; cursor: default; top: 40px; left: 226px; height: 876px; display: block; opacity: 0;">
+    <div style="position: relative; float: right; width: 4px; background-color: rgb(255, 255, 255); border: 0px none; background-clip: padding-box; border-radius: 5px; height: 807px; top: 0px;" class="nicescroll-cursors"></div>
+</div>
+<div id="ascrail2000-hr" class="nicescroll-rails nicescroll-rails-hr" style="height: 4px; z-index: 100; position: fixed; cursor: default; display: none; top: 912px; left: 0px; width: 226px; opacity: 0;">
+    <div style="position: absolute; top: 0px; height: 4px; background-color: rgb(255, 255, 255); border: 0px none; background-clip: padding-box; border-radius: 5px; width: 230px;" class="nicescroll-cursors"></div></div>
+</body>
+</html>
+<script src="__ADMIN__/js/jquery.js"></script>
+<script src="__ADMIN__/js/tip.js"></script>
+<script type="text/javascript">
+    function test(){
+        var form = new FormData(document.getElementById("tf"));
+        $.ajax({
+            url:"{:url('admin/Broad/bEdit')}",
+            type:"POST",
+            data:form,
+            processData:false,
+            contentType:false,
+            success:function(data){
+                var t = JSON.parse(data);
+
+                if (t.status == 1) {
+                    tip(t.msg, t.status, t.url);
+                } else {
+                    tip(t.msg, t.status, '');
+                }
+            },
+            error:function () {
+                tip(data.msg, 2);
+            }
+        });
+    }
+</script>

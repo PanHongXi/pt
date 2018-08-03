@@ -1,0 +1,140 @@
+﻿
+<!--抬头1-->
+<div id="top1">
+    <div class="totalwidth">
+        <div class="fl">
+            您好，欢迎进入东莞市虎门平特精五金制品有限公司官方网站！
+        </div>
+        <div class="top_y">
+            ※ <a href="sitemap.htm">网站地图</a> ※ <a href="news.html">新闻资讯</a> ※ <a href="feedback.html">在线留言</a> ※ <a href="dgweb-119361.html">联系平特精</a>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+<!--top2-->
+<div id="head">
+    <div id="head_bg">
+        <div class="fl">
+            <a href="/"><img alt="东莞市虎门平特精五金模具厂" src="__INDEX__/img/20171114092817_869435852.png" /></a>
+        </div>
+        <div class="head_c" style="width: 620px">
+            <div class="c1">
+                东莞市虎门<span  >平特精五金制品有限公司</span>
+            </div>
+        </div>
+        <div class="head_h" style="margin-right: 100px">
+            <div class="h1">
+                专注于雕刻精密模具
+            </div>
+            <div class="h2">
+                可来图来样定制生产加工
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--导航-->
+<div id="nav_bg">
+    <div id="nav_c">
+        <div id="nav">
+            <ul>
+                <li>
+                    <a class="a_nav" href="{:url('index/index/index')}">网站首页</a>
+                </li>
+                {volist name="navList" id="navList"}
+                    <li>
+                        <a id="a1" href="{$navList['url']}">{$navList.nav_name}</a>
+                    </li>
+                {/volist}
+            </ul>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+<!--此段JS必须放置在导航代码以下-->
+<script type="text/javascript">
+    // JavaScript Document
+    var curUrl = location.pathname.substr(1);
+    if (curUrl.indexOf("products") > -1) {
+        document.getElementById('a1').className = " a_nav";
+    };
+    if (curUrl.indexOf("119404") > -1) {
+        document.getElementById('a2').className = " a_nav";
+    };
+    if (curUrl.indexOf("121755") > -1) {
+        document.getElementById('a3').className = " a_nav";
+    };
+    if (curUrl.indexOf("119378") > -1) {
+        document.getElementById('a4').className = " a_nav";
+    };
+    if (curUrl.indexOf("company") > -1) {
+        document.getElementById('a5').className = " a_nav";
+    };
+    if (curUrl.indexOf("119405") > -1) {
+        document.getElementById('a6').className = " a_nav";
+    };
+    if (curUrl.indexOf("news") > -1) {
+        document.getElementById('a7').className = " a_nav";
+    };
+    if (curUrl.indexOf("118968") > -1) {
+        document.getElementById('a8').className = " a_nav";
+    };
+    if (curUrl.indexOf("feedback") > -1) {
+        document.getElementById('a9').className = " a_nav";
+    };
+    if (curUrl.indexOf("119361") > -1) {
+        document.getElementById('a10').className = " a_nav";
+    };
+</script>
+<!--banner-->
+<div id="flash_bg">
+    <script type="text/javascript" src="__INDEX__/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="__INDEX__/js/jq.focus.js"></script>
+    <div class="focus">
+        <div class="jqfocus">
+            <ul>
+                {volist name="broadList" id="broadList"}
+                    {if condition="$show eq 1"}
+                        <li>
+                            <a title="{$broadList.name}" style="background:url(__UPLOADS__/{$broadList.thumb}) no-repeat center;width:100%;height:500px;display:block;" href=""></a>
+                        </li>
+                    {else/}
+                        <li>
+                            <a title="{$broadList.name}" style="background:url(__UPLOADS__/{$broadList.thumb}) no-repeat center;width:100%;height:350px;display:block;" href=""></a>
+                        </li>
+                    {/if}
+                {/volist}
+            </ul>
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+</div>
+<!--搜索-->
+<form name="form1" style="margin:0px;padding:0px;overflow:hidden;" action="products_s.html" method="get" onsubmit="document.cookie='key_word=' + (encodeURIComponent (document.getElementById('infoname').value));">
+    <div id="search">
+        <div class="totalwidth">
+            <div class="search_l">
+                <span>热门关键词：<a href="http://www.yanfei168.com/company.html" target="_blank">中式雕花浮雕</a></span>、<a href="http://www.yanfei168.com/dgweb-119404.html" target="_blank">铜硅胶模具</a>、<a href="http://www.yanfei168.com/products.html">精雕厂</a>、<a href="products.html">CNC电脑雕刻</a>、<a href="products-248680-0-0.html">精雕铜公</a>、<a href="products-248677-0-0.html">工艺品浮雕</a>、<a href="products-248679-0-0.html">高周波模具</a>、<a href="products.html">电木板雕刻</a>
+            </div>
+            <div id="search_r">
+                <ul>
+                    <li style="background:url(images/20171114102103_647714040.jpg&quot;) no-repeat;width:266px;height:34px;">
+                        <input name="infoname" class="input" id="infoname" style="background:none;margin:0px 0px 0px 10px;padding:0px;border:currentColor;border-image:none;width:240px;height:34px;color:#CCCCCC;line-height:32px;" size="13" value="请您输入关键词搜索" data-ke-onblur="if(this.value==''){this.value='请您输入关键词搜索';this.style.color='#cccccc'}" onfocus="if(this.value=='请您输入关键词搜索'){this.value='';this.style.color='#cccccc'}" />
+                    </li>
+                    <li style="width:44px;">
+                        <input name="imageField" width="44" style="border:currentColor;border-image:none;" type="image" src="__INDEX__/img/20171114102103_1600343521.jpg" />
+                    </li>
+                </ul>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+    </div>
+    <script>
+        var reg=/key_word=([^;]+)/img;
+        var mc=reg.exec(document.cookie);
+        document.getElementById("infoname").value = decodeURIComponent(mc[1]);</script>
+</form>

@@ -1,0 +1,65 @@
+<aside id="mainSidebar" class="main-sidebar">
+    <div class="search">
+        <!--<form action="/admin/product/list" method="get">-->
+            <!--<input name="searchProperty" type="hidden" value="name">-->
+            <!--<div class="input-group">-->
+                <!--<input name="searchValue" class="form-control" type="text" placeholder="商品搜索" x-webkit-speech="x-webkit-speech" x-webkit-grammar="builtin:search">-->
+                <!--<div class="input-group-btn">-->
+                    <!--<button class="btn btn-default" type="submit">-->
+                        <!--<i class="iconfont icon-search"></i>-->
+                    <!--</button>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</form>-->
+    </div>
+    <div id="mainSidebarPanelGroup" class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a href="#contentGroupPanelCollapse" data-toggle="collapse" data-parent="#mainSidebarPanelGroup">
+                        <i class="iconfont icon-text"></i>
+                        <span>内容管理</span>
+                        <i class="iconfont icon-unfold"></i>
+                    </a>
+                </h4>
+            </div>
+            <div id="contentGroupPanelCollapse" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="{:url('admin/Nav/navList')}">
+                                <i class="iconfont icon-weixuanzhong"></i>
+                                导航管理
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="{:url('admin/Product/plist')}">
+                                <i class="iconfont icon-weixuanzhong"></i>
+                                产品列表
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="{:url('admin/System/sList')}">
+                                <i class="iconfont icon-weixuanzhong"></i>
+                                系统设置
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="{:url('admin/Broad/bList')}">
+                                <i class="iconfont icon-weixuanzhong"></i>
+                                轮播设置
+                            </a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <a href="{:url('admin/Link/lList')}">
+                                <i class="iconfont icon-weixuanzhong"></i>
+                                友情链接
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>

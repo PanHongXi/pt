@@ -1,0 +1,30 @@
+<div id="Sort">
+    <div id="Sort_t">
+        <div class="Sort_h1">
+            平特精五金-产品分类
+        </div>
+        <div class="Sort_h2">
+            product category
+        </div>
+    </div>
+    <div id="Sort_d">
+        <div id="Sort_flt">
+            <div id="Sort_fltt">
+                <table width=96% border=0 cellpadding=0 cellspacing=0>
+                    <?php foreach($navProductList['navName'] as $k => $v):?>
+                        <tr>
+                            <td height="50">
+                                <a href="{:url('index/Product/pList',array('id' => $k))}" style='color:#0;;font-weight:1'
+                                   title="<?php echo $v;?>"><?php echo $v;?>
+                                </a>
+                            </td>
+                        </tr>
+                    <?php endforeach;?>
+                </table>
+            </div>
+        </div>
+        <style type="text/css">.ddsubmenustyle li a{width:auto;}.markermenu ul li a{font-size:14px;}</style>
+    </div>
+    <div class="clear">
+    </div>
+</div>

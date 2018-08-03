@@ -1,0 +1,576 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>中式雕花浮雕,铜硅胶模具,精雕厂,精雕雕刻加工-东莞市虎门平特精五金制品有限公司</title>
+    <meta name="keywords" content="中式雕花浮雕,铜硅胶模具,精雕厂,精雕雕刻加工-东莞市虎门平特精五金制品有限公司" />
+    <meta name="description" content="东莞市虎门平特精五金制品有限公司是一家专业的中式雕花浮雕,铜硅胶模具,精雕厂,精雕雕刻加工.电话:18676043105/胡小姐." />
+    <link charset="gb2312" href="__INDEX__/css/indexcss.css" rel="stylesheet" type="text/css" />
+    <script language="JavaScript" type="text/javascript" src="__INDEX__/js/indexjs.js"></script>
+
+    <script>
+        var uaTest = /Android|webOS|Windows Phone|iPhone|ucweb|ucbrowser|iPod|BlackBerry/i.test(navigator.userAgent.toLowerCase());
+        var touchTest = 'ontouchend' in document;
+        if(uaTest && touchTest){
+            window.location.href='http://m.yanfei168.com';
+        }
+    </script>
+
+</head>
+<body>
+<link href="__INDEX__/css/allbag.css" rel="stylesheet" type="text/css" />
+{include file="common/header"}
+<!--合作客户-->
+<div class="partner_bg">
+    <div class="partner_t">
+        <span>平特精五金模具</span>合作客户
+    </div>
+    <div class="totalwidth">
+        <div class="partner_con">
+            <p class="fl" id="range_l">
+                <img alt="左箭头" src="__INDEX__/img/20171016091740_1624149998.png" />
+            </p>
+            <p class="fr" id="range_r">
+                <img alt="右箭头" src="__INDEX__/img/20171016091744_1642164779.png" />
+            </p>
+            <div id="range_d" style="margin-top:10px;">
+                <table width=100% border=0 align=center cellpadding=0 cellspacing=0>
+                    <tr>
+                        {volist name="cooperList" id="cooperList"}
+                            <td align=center style=padding-left:5px;>
+                                <a href="{:url('index/Product/details',array('id' => $cooperList['id']))}">
+                                    <img src="__UPLOADS__/{$cooperList.thumb}" width="240" height="120" border=0 alt="{$cooperList.pname}">
+                                </a>
+                                <br>
+                                <div style=padding-top:5px;>
+                                    <a href="{:url('index/Product/details',array('id' => $cooperList['id']))}" title="{$cooperList.pname}">
+                                        {$cooperList.pname}
+                                    </a>
+                                </div>
+                            </td>
+                        {/volist}
+                    </tr>
+                </table>
+                <script src="__INDEX__/js/productmobile.js"></script>
+            </div>
+            <div class="clear">
+            </div>
+            <script>
+                var scrollPic_02 = new ScrollPic();
+                scrollPic_02.scrollContId = "range_d"; // 内容容器ID""
+                scrollPic_02.arrLeftId = "range_l"; //左箭头ID
+                scrollPic_02.arrRightId = "range_r"; //右箭头ID
+                scrollPic_02.frameWidth = 1000; //显示框宽度
+                scrollPic_02.pageWidth = 250; //翻页宽度
+                scrollPic_02.speed = 5; //移动速度(单位毫秒，越小越快)
+                scrollPic_02.space = 20; //每次移动像素(单位px，越大越快)
+                scrollPic_02.autoPlay = true; //自动播放
+                scrollPic_02.autoPlayTime = 2; //自动播放间隔时间(秒)
+                scrollPic_02.initialize(); //初始化
+            </script>
+        </div>
+    </div>
+</div>
+<!--Sort-->
+<div style="margin:40px auto;width:1112px;padding-left:12px;">
+    {include file="common/navProduct1"}
+    <div class="prod_t fr">
+        <div id="tablit">
+            <dl>
+                <?php foreach($navProductList['navName'] as $k => $v):?>
+                    <dt></dt>
+                    <dd <?php if($k == 0) { echo "class='on'"; } ?> id="showtd<?php echo $k;?>" onmouseover="javascript:div_show(<?php echo $k;?>);">
+                        <a href="products.html"><?php echo $v;?></a>
+                    </dd>
+                <?php endforeach;?>
+                <dt></dt>
+                <dt></dt>
+            </dl>
+        </div>
+        <div class="clear">
+        </div>
+        <div class="prod_t1">
+            <?php foreach($navProductList['list'] as $k => $v):?>
+                <div class="tabcon cp <?php if($k != 0) { echo "dis"; } ?> beta" id="showdiv<?php echo $k;?>">
+                    <table width=100% border=0 align=center cellpadding=0 cellspacing=0>
+                        <tr>
+                            <?php foreach($v as $k1 => $v1):?>
+                                <td align=center style=padding-left:5px>
+                                    <a href="{:url('index/Product/details',array('id' => $v1['id']))}"  target='_blank'>
+                                        <?php if($v1['thumb']):?>
+                                            <img src="__UPLOADS__/<?php echo $v1['thumb'];?>" width="260" height="195" alt="<?php echo $v1['pname'];?>" title="<?php echo $v1['pname'];?>" border=0>
+                                        <?php else: ?>
+                                            <img src="__LOGO__" width="260" height="195" alt="<?php echo $v1['pname'];?>" title="<?php echo $v1['pname'];?>" border=0>
+                                        <?php endif;?>
+                                    </a><br>
+                                    <span style="line-height:25px;">
+                                         <a href="{:url('index/Product/details',array('id' => $v1['id']))}"  target='_blank' title="<?php echo $v1['pname'];?>"><?php echo $v1['pname'];?></a>
+                                     </span>
+                                </td>
+                            <?php endforeach;?>
+                        </tr>
+                    </table>
+                 </div>
+            <?php endforeach;?>
+            <script language="JavaScript" type="text/javascript">
+                var $$=function(id){return document.getElementById(id);}
+                function div_show(total) {
+                    for(i=0;i<=10;i++) { if (i==total) { $$('showdiv'+i).style.display="Block"; $$('showtd'+i).className='on'; }else { $$('showdiv'+i).style.display="None"; $$('showtd'+i).className='out'; } } }
+            </script>
+            <!--向上滚动代码结束-->
+            <script type="text/javascript">
+                $(".beta > table > tbody > tr > td").each(function(){
+                    proatext = $(this).find('span').find('a').html();
+                    proaurl = $(this).find('span').find('a').attr('href');
+                    imgHzz=$(this).find('a').eq(0).outerHeight() - 35;
+                    $(this).children('a').eq(0).append("
+                        <div class="betago">
+                        " + "<a>"  + proatext + "" + "</a>" + "
+                    </div>
+                    ");
+                    $(this).find('.ceshigo').find('a').attr('href',proaurl);
+                    $(this).find('.betago').css({
+                        'line-height': imgHzz + 'px'
+                    });
+                });
+            </script>
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+</div>
+<!--应用案例/-->
+<div id="case_bg">
+    <div class="totalwidth">
+        <div class="case_t">
+            {$applyDesc['nav_name']}
+        </div>
+        <div class="clear">
+        </div>
+        <div class="case_t1">
+            {$applyDesc['content']}
+        </div>
+        <div class="clear">
+        </div>
+        <div class="case_d">
+            <DIV id=roller_left style="OVERFLOW: hidden; WIDTH: 1100px; HEIGHT: 210px">
+                <TABLE>
+                    <TR>
+                        <TD id=roller_content>
+                            <table width="1100" border=0 cellspacing=0 cellpadding=0 align=center>
+                                <tr>
+                                    {volist name="applyList" id="applyList"}
+                                        <td align=center style="padding-left:5px;line-height:20px;color:#0">
+                                            <a href="{:url('index/Product/details',array('id' => $applyList['id']))}">
+                                                <img src="__UPLOADS__/{$applyList['thumb']}" width="260" height="195" border=0 alt="{$applyList['pname']}">
+                                            </a>
+                                            <a href="{:url('index/Product/details',array('id' => $applyList['id']))}">
+                                                <br>
+                                                {$applyList['pname']}
+                                            </a>
+                                        </td>
+                                    {/volist}
+                                </tr>
+                            </table>
+                        </TD>
+                        <TD id=roller_temp vAlign=top ></TD>
+                    </TR>
+                </TABLE>
+            </DIV>
+            <script language="JavaScript" type="text/JavaScript">
+            var h_roller_speed_dzweb=25
+            roller_temp.innerHTML=roller_content.innerHTML
+            function H_Roller_Marquee_dzweb(){
+                if(roller_temp.offsetWidth-roller_left.scrollLeft<=0)
+                    roller_left.scrollLeft-=roller_content.offsetWidth
+                else{
+                    roller_left.scrollLeft++
+                }
+            }
+            var h_roller_variable_dzweb=setInterval(H_Roller_Marquee_dzweb,h_roller_speed_dzweb)
+            roller_left.onmouseover=function() {clearInterval(h_roller_variable_dzweb)}
+            roller_left.onmouseout=function() {h_roller_variable_dzweb=setInterval(H_Roller_Marquee_dzweb,h_roller_speed_dzweb)}
+        </script>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+<!--广告/-->
+<div id="advert_bg">
+    <div class="totalwidth">
+        <div class="advert_c">
+            <div class="t1">
+                <span>广泛应用于：</span>{$applyDesc['content']}
+            </div>
+            <div class="t2">
+                <span>加工材质范围：</span>钢、铁、铜、铝、木、石头、塑料等
+            </div>
+            <!--<div class="t3">-->
+                <!--<a href="dgweb-119361.html">立即咨询</a>-->
+            <!--</div>-->
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+<!--优势/-->
+<div id="superior">
+    <div class="totalwidth">
+        <div class="superior_t">
+           平特精五金模具
+        </div>
+        <div class="superior_t1">
+            <div class="t1">
+                专注于定制生产加工雕刻精密模具
+            </div>
+            <div class="t2">
+                可根据客户提供的图纸样本研发生产加工
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+<div id="superior_bg">
+    <div class="totalwidth">
+        <?php foreach($ptList as $k => $v):?>
+            <?php if($k == 1 || $k == 0):?>
+                <div class="superior_fr">
+                    <div class="superior_h1">
+                        <?php echo $v['pname'];?>
+                    </div>
+                    <div class="superior_h2">
+                        <?php echo $v['pdesc'];?>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            <?php endif;?>
+        <?php endforeach;?>
+    </div>
+</div>
+<div id="superior_bg1">
+    <div class="totalwidth">
+        <?php foreach($ptList as $k => $v):?>
+            <?php if($k > 1):?>
+                <div class="superior_fl">
+                    <div class="superior_h1">
+                        <?php echo $v['pname'];?>
+                    </div>
+                    <div class="superior_h2">
+                        <?php echo $v['pdesc'];?>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            <?php endif;?>
+        <?php endforeach;?>
+    </div>
+</div>
+<!--公司简介/-->
+<div id="company">
+    <div class="totalwidth">
+        <div class="company_l">
+            <img style="width: 430px;height: 322px;" src="__UPLOADS__/{$briefInfo['thumb']}" alt=""/>
+            <!--<script src="__INDEX__/js/new_web_flash_news1-119405-430-322-f57f01-6.js"></script>-->
+        </div>
+        <div class="company_r">
+            <div class="r1">
+                {$briefInfo['pname']}
+            </div>
+            <div class="clear">
+            </div>
+            <div class="r2">
+                东莞市虎门平特精五金模具厂
+            </div>
+            <div class="r3">
+                {$briefInfo['pdesc']}
+            </div>
+            <div class="clear">
+            </div>
+            <div class="r4">
+                <a href="company.html">+点击更多</a>
+            </div>
+            <div class="r4">
+                <a href="dgweb-119405.html">+企业形象</a>
+            </div>
+            <div class="r4">
+                <a href="feedback.html">+在线留言</a>
+            </div>
+            <div class="r4" style="margin-right:0px;">
+                <a href="dgweb-119361.html">+联系我们</a>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+<!--定制/-->
+<div id="process_t">
+    <div class="t1">
+        精密模具定制流程
+    </div>
+    <div class="t2">
+        Precision mold customization process
+    </div>
+</div>
+<div id="process_c">
+    <div class="process_m">
+        <ul>
+            {volist name="processList" id="processList"}
+                <li>
+                    {$processList['pname']}
+                </li>
+            {/volist}
+        </ul>
+    </div>
+</div>
+<!--新闻-->
+<div id="news">
+    <div class="lanrenzhijia">
+        <div class="tab">
+            <a class="on" href="news.html">新闻中心</a> <a href="dgweb-118968.html">常见问题</a>
+        </div>
+        <div class="content">
+            <ul class="ul">
+                <li class="li">
+                    <div class="news2">
+                        <?php foreach($newList as $k => $v):?>
+                            <?php if($k == 0):?>
+                                <div class="news21">
+                                    <div class="news_div"><div class="news_div_item"><div class="news_div_item_date"></div> <div class="news_div_item_content">
+                                        <div class="news_div_item_title">
+                                            <a class="news_div_item_a" href="{:url('index/Product/details',array('id' => $v['id']))}" title="<?php echo $v['pname'];?>"><?php echo $v['pname'];?></a>
+                                        </div>
+                                        <div class="news_div_item_body">
+                                            <?php echo $v['pname'];?></div>
+                                    </div> <div class="news_div_item_pic">
+                                        <a href="{:url('index/Product/details',array('id' => $v['id']))}" title="<?php echo $v['pname'];?>">
+                                            <img src="__UPLOADS__/<?php echo $v['thumb'];?>" class="news_div_item_image" title="<?php echo $v['pname'];?>" alt="<?php echo $v['pname'];?>">
+                                        </a>
+                                    </div></div></div>
+                                </div>
+                            <?php endif;?>
+                        <?php endforeach; ?>
+
+                        <div class="news22">
+                            <div class="news_div">
+                                <?php foreach($newList as $k => $v):?>
+                                        <div class="news_div_item">
+                                        <div class="news_div_item_date">
+                                            <div class="news_div_item_year">  <?php echo date("Y", $v['time']);?> / </div>
+                                            <div class="news_div_item_month"><?php echo date("m", $v['time']);?></div>
+                                            <div class="news_div_item_day"><?php echo date("d", $v['time']);?></div>
+                                        </div>
+                                        <div class="news_div_item_content">
+                                    <div class="news_div_item_title">
+                                        <a class="news_div_item_a" href="{:url('index/Product/details',array('id' => $v['id']))}" title=" <?php echo $v['pname'];?>"> <?php echo $v['pname'];?></a>
+                                    </div>
+                                    <div class="news_div_item_body">
+                                        <?php echo $v['pname'];?>.</div>
+                                    </div>
+                                    </div>
+                                <?php endforeach; ?>
+                        </div>
+                    </div>
+                </li>
+                <li class="li">
+                    <div class="news2">
+                        <div class="news21">
+                            <div class='divdgweb_new_div'>
+                                <?php foreach($problemList as $k => $v):?>
+                                    <?php if($k == 0):?>
+                                        <div class="divdgweb_new_div_item">
+                                            <div class="divdgweb_new_div_item_date">
+                                                <div class="divdgweb_new_div_item_year"><?php echo date("Y", $v['time']);?></div>
+                                                <div class="divdgweb_new_div_item_month"><?php echo date("m", $v['time']);?></div>
+                                                <div class="divdgweb_new_div_item_day"><?php echo date("d", $v['time']);?></div>
+                                            </div>
+                                            <div class="divdgweb_new_div_item_content">
+                                        <div class="divdgweb_new_div_item_title">
+                                            <a class="divdgweb_new_div_item_a" href="{:url('index/Product/details',array('id' => $v['id']))}" title="<?php echo $v['pname'];?>"><?php echo $v['pname'];?></a>
+                                        </div>
+                                        <div class="divdgweb_new_div_item_body"><?php echo $v['pname'];?></div>
+                                    </div>
+                                            <div class="news_div_item_pic">
+                                        <a href="{:url('index/Product/details',array('id' => $v['id']))}">
+                                            <img src="__UPLOADS__/<?php echo $v['thumb'];?>" class="news_div_item_image" title="<?php echo $v['pname'];?>" alt="<?php echo $v['pname'];?>">
+                                        </a>
+                                    </div>
+                                    <?php endif;?>
+                                <?php endforeach; ?>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="news22">
+                            <div class='divdgweb_new_div'>
+                                <?php foreach($problemList as $k => $v):?>
+                                    <div class="divdgweb_new_div_item">
+                                    <div class="divdgweb_new_div_item_date">
+                                        <div class="divdgweb_new_div_item_year"><?php echo date("Y", $v['time']);?>/</div>
+                                        <div class="divdgweb_new_div_item_month"><?php echo date("m", $v['time']);?></div>
+                                        <div class="divdgweb_new_div_item_day"><?php echo date("d", $v['time']);?></div>
+                                    </div>
+                                    <div class="divdgweb_new_div_item_content">
+                                <div class="divdgweb_new_div_item_title">
+                                    <a class="divdgweb_new_div_item_a" href="{:url('index/Product/details',array('id' => $v['id']))} title="<?php echo $v['pname'];?>"><?php echo $v['pname'];?></a>
+                                </div>
+                                <div class="divdgweb_new_div_item_body"><?php echo $v['pname'];?></div>
+                            </div>
+                                </div>
+                                <?php endforeach; ?>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        $(function() {
+            $('.lanrenzhijia .content .ul').width(1100 * $('.lanrenzhijia .content li').length + 'px');
+            $(".lanrenzhijia .tab a").mouseover(function() {
+                $(this).addClass('on').siblings().removeClass('on');
+                var index = $(this).index();
+                number = index;
+                var distance = -1100 * index;
+                $('.lanrenzhijia .content .ul').stop().animate({
+                    left: distance
+                });
+            });
+            var auto = 0; //等于1则自动切换，其他任意数字则不自动切换
+            if (auto == 1) {
+                var number = 0;
+                var maxNumber = $('.lanrenzhijia .tab a').length;
+                function autotab() {
+                    number++;
+                    number == maxNumber ? number = 0 : number;
+                    $('.lanrenzhijia .tab a:eq(' + number + ')').addClass('on').siblings().removeClass('on');
+                    var distance = -1100 * number;
+                    $('.lanrenzhijia .content .ul').stop().animate({
+                        left: distance
+                    });
+                }
+                var tabChange = setInterval(autotab, 3000);
+                //鼠标悬停暂停切换
+                $('.lanrenzhijia').mouseover(function() {
+                    clearInterval(tabChange);
+                });
+                $('.lanrenzhijia').mouseout(function() {
+                    tabChange = setInterval(autotab, 3000);
+                });
+            }
+        });
+    </script>
+</div>
+<!--link-->
+<div id="link_bg">
+    <div class="totalwidth">
+        <div class="link_z">
+            友情链接/<span>Links：</span>
+        </div>
+        <div class="link_y">
+            <style type='text/css'>
+                .linkTagcs
+                {
+                    width:920px;
+                    height:auto;}
+                .linkTagcs ul
+                {margin:0px;padding:0px;list-style-type:none;}
+                .linkTagcs li
+                {list-style:none;margin:0px;  padding-right:10px;line-height:60px;float:left;}
+                .linkTagcs li a
+                {color:#fff;word-break:break-all;}
+                .linkTagcs li img
+                {border:0px;}
+            </style>
+            <div class='linkTagcs'>
+                <ul>
+                    {volist name="linkList" id="linkList"}
+                        <li>
+                            <a href="{$linkList['url']}" target=_blank style='color:#fff'>{$linkList['name']}</a>
+                        </li>
+                    {/volist}
+                </ul>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+<!--版权-->
+{include file="common/footer"}
+<style>
+    /*浮动QQ*/
+    .back-top-container { display: block; position: fixed; right: 50px; bottom: 50px; cursor: pointer; z-index: 99999;}
+    .back-top { opacity: 0.8; width: 32px; height: 32px; z-index:10000000; background: #868686 url(__INDEX__/img/20170415171251_1727876643.png) center center no-repeat; }
+    .back-top:hover { opacity: 1; }
+    .back-top-text { margin-top: 3px; padding-left: 7.5px; width: 32px; border: 1px solid #000; border-radius: 5px; background: #fff; }
+    .back-top:hover {opacity: 1; }
+    .yb_conct { position: fixed; z-index: 9999999; top: 100px; right: -127px; cursor: pointer; transition: all .3s ease; }
+    .yb_bar ul li {width: 180px;  height: 53px;  font: 15px/53px 'Microsoft YaHei';  color: #fff;  text-indent: 54px;  margin-bottom: 1px;  border-radius: 3px; transition: all .5s ease;  overflow: hidden; }
+    .yb_bar .yb_top {background: #0089e2 url(__INDEX__/img/20170415171251_1727876643.png) no-repeat 0 0; }
+    .yb_bar .yb_phone {background: #0089e2 url(__INDEX__/img/20170415171251_1727876643.png) no-repeat 0 -57px; }
+    .yb_bar .yb_QQ {text-indent: 0;  background: #0089e2 url(__INDEX__/img/20170415171251_1727876643.png) no-repeat 0 -113px;}
+    .yb_bar .yb_ercode {  background: #0089e2 url(__INDEX__/img/20170415171251_1727876643.png) no-repeat 0 -169px; }
+    .hd_qr { padding: 0 29px 25px 29px; }
+    .yb_QQ a { display: block; text-indent: 54px; font-size:15px;  width: 100%;  height: 100%;  color: #fff; }
+</style>
+<!--浮动qq-->
+<script src="__INDEX__/js/gototop.js"></script>
+<div class="back-top-container" id="gotop">
+    <div class="yb_conct">
+        <div class="yb_bar">
+            <ul>
+                <li class="yb_top">
+                    返回顶部
+                </li>
+                <li class="yb_phone">
+                   {$infoPhone['content']}
+                </li>
+                <li class="yb_QQ">
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=2273302131&site=东莞市虎门平特精五金模具厂&menu=yes" target="_blank">{$infoQq['content']}</a>
+                </li>
+                <li class="yb_ercode" style="height:53px;">
+                    {$infoApp['sname']} <br />
+                    <img width="125" class="hd_qr" src="__UPLOADS__/{$infoApp['thumb']}" />
+                </li>
+                <li class="yb_ercode" style="height:53px;">
+                    {$infoWechat['sname']} <br />
+                    <img width="125" class="hd_qr" src="__UPLOADS__/{$infoWechat['thumb']}" />
+                </li>
+                <li class="yb_ercode" style="height:53px;">
+                    {$infoSmall['sname']}<br />
+                    <img width="125" class="hd_qr" src="__UPLOADS__/{$infoSmall['thumb']}" />
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    if (window.attachEvent) {
+        window.attachEvent("onload", tongji);
+    } else if (window.addEventListener) {
+        window.addEventListener("load", tongji, false);
+    }
+    function tongji() {
+        var pageUrl = "http://tj.114my.cn/?u_data=0VOLPceiKeAsWd5oWaXa2mCXmcp4kHU7bCp3YHU1BXleNUwD5uZGIZZl38Oc3vVwkPAxSIoHYmmFvqUYAzcK9NScu%2FfKiCGY";
+        var sourceUrl = encodeURIComponent(document.referrer);
+
+        var bodyText = document.getElementsByTagName('body')[0];
+        var script= document.createElement('script');
+        script.onload = script.onreadystatechange = function() {
+            if(!this.readyState || this.readyState === "loaded" || this.readyState === "complete" ){
+                // Handle memory leak in IE
+                script.onload = script.onreadystatechange = null;
+            }
+        };
+        script.src = pageUrl+'&source_url='+sourceUrl;;
+        bodyText.appendChild(script);
+    }
+</script>
+
+</body>
+</html>
